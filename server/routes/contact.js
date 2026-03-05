@@ -4,11 +4,11 @@ const Message = require('../models/Message')
 
 const router = express.Router()
 
-// POST /api/contact
+
 router.post('/', async (req, res) => {
   const { name, email, subject, message } = req.body
 
-  // Basic validation
+
   if (!name || !email || !message) {
     return res.status(400).json({ error: 'Name, email and message are required.' })
   }
@@ -25,13 +25,13 @@ router.post('/', async (req, res) => {
         pass: process.env.GMAIL_PASS,
       },
       tls: {
-        rejectUnauthorized: false   // ← yeh line add karo
+        rejectUnauthorized: false
       }
     })
 
     await transporter.sendMail({
       from: `"Portfolio Contact" <${process.env.GMAIL_USER}>`,
-      to: process.env.GMAIL_USER,   // email to yourself
+      to: process.env.GMAIL_USER,
       subject: `💌 New Message: ${subject || 'Portfolio Contact'}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 500px; padding: 24px; border: 1px solid #e0e0e0; border-radius: 8px;">

@@ -1,13 +1,12 @@
 import { useRef, useState } from 'react'
 import './Contact.css'
 
-// In dev: Vite proxy sends /api → localhost:5000
-// In production: set VITE_API_URL in .env to your Render URL
+
 const API_URL = import.meta.env.VITE_API_URL || ''
 
 export default function Contact() {
   const formRef = useRef()
-  const [status, setStatus] = useState(null) // null | 'sending' | 'success' | 'error'
+  const [status, setStatus] = useState(null) 
   const [errMsg, setErrMsg] = useState('')
 
   const handleSubmit = async (e) => {

@@ -1,18 +1,18 @@
-const express  = require('express')
+const express = require('express')
 const mongoose = require('mongoose')
-const cors     = require('cors')
+const cors = require('cors')
 require('dotenv').config()
 
 const contactRoute = require('./routes/contact')
 
-const app  = express()
+const app = express()
 const PORT = process.env.PORT || 5000
 
 // ── Middleware ──────────────────────────────────────────
 app.use(cors({
   origin: [
-    'http://localhost:5173',   // Vite dev
-    'https://your-portfolio.vercel.app',  // production (update this)
+    'http://localhost:5173',
+    'https://your-portfolio.vercel.app',
   ],
   credentials: true,
 }))

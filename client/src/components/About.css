@@ -19,11 +19,11 @@
   aspect-ratio: 3/4;
   border-radius: 1rem;
   object-fit: cover;
-  /* ← yeh add karo */
+
   object-position: top;
-  /* ← yeh add karo */
+
   display: block;
-  /* ← yeh add karo */
+
 }
 
 .about-img-placeholder::after {

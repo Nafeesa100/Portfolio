@@ -65,20 +65,20 @@ export default function Contact() {
             <div className="form-row">
               <div className="form-group">
                 <label>Your Name</label>
-                <input type="text" name="from_name" placeholder="John Doe" required />
+                <input type="text" name="from_name" required />
               </div>
               <div className="form-group">
                 <label>Your Email</label>
-                <input type="email" name="from_email" placeholder="john@example.com" required />
+                <input type="email" name="from_email" required />
               </div>
             </div>
             <div className="form-group">
               <label>Subject</label>
-              <input type="text" name="subject" placeholder="Project Inquiry / Collaboration..." />
+              <input type="text" name="subject" />
             </div>
             <div className="form-group">
               <label>Message</label>
-              <textarea name="message" placeholder="Tell me about your project or just say hi! 👋" required />
+              <textarea name="message" required />
             </div>
 
             <button type="submit" className="form-submit" disabled={status === 'sending'}>

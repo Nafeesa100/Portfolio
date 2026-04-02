@@ -25,7 +25,7 @@ const projects = [
     tags: ['React', 'State Mgmt', 'UI/UX'],
     title: 'To-Do Application',
     desc: 'A dynamic task management app with create, update, delete, and completion features. Includes filtering logic for completed/pending tasks.',
-    demo: 'https://todoapp-five-a.vercel.app',
+    demo: 'https://todoapp-five-ashy.vercel.app/',
     github: "https://github.com/Nafeesa100/TODOAPP.git",
   },
 ]

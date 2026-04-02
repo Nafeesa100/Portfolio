@@ -1,0 +1,208 @@
+.hero {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 8rem 5rem 4rem;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--cream) 55%, var(--sky-light) 100%);
+}
+
+.hero-bg-circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.18;
+  pointer-events: none;
+}
+.hero-bg-circle.c1 {
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, var(--sky-deep), transparent);
+  top: -100px; right: -100px;
+  animation: floatUp 8s ease-in-out infinite alternate;
+}
+.hero-bg-circle.c2 {
+  width: 300px; height: 300px;
+  background: radial-gradient(circle, var(--gold), transparent);
+  bottom: 50px; left: 100px;
+  animation: floatUp 6s ease-in-out infinite alternate-reverse;
+}
+@keyframes floatUp {
+  from { transform: translateY(0px) scale(1); }
+  to   { transform: translateY(-30px) scale(1.05); }
+}
+
+.hero-content { position: relative; z-index: 2; }
+
+.hero-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 500;
+  padding: 0.4rem 1rem;
+  border: 1px solid var(--sky-deep);
+  border-radius: 2rem;
+  margin-bottom: 1.5rem;
+  animation: fadeSlideIn 0.8s ease forwards;
+}
+
+.hero-name {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(3rem, 5vw, 5rem);
+  line-height: 1.05;
+  color: var(--ink);
+  margin-bottom: 0.5rem;
+  animation: fadeSlideIn 0.9s ease 0.1s both;
+}
+.hero-name em { font-style: italic; color: var(--accent); display: block; }
+
+.hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: var(--ink-soft);
+  letter-spacing: 0.05em;
+  margin-bottom: 1.8rem;
+  animation: fadeSlideIn 1s ease 0.2s both;
+}
+
+.hero-desc {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--ink-muted);
+  max-width: 440px;
+  margin-bottom: 2.5rem;
+  animation: fadeSlideIn 1s ease 0.3s both;
+}
+
+.hero-btns {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  animation: fadeSlideIn 1s ease 0.4s both;
+}
+
+.btn-primary {
+  padding: 0.9rem 2.2rem;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 0.4rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: none;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+  box-shadow: 0 4px 20px rgba(91,154,181,0.3);
+}
+.btn-primary:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(91,154,181,0.4);
+}
+
+.btn-outline {
+  padding: 0.9rem 2.2rem;
+  background: transparent;
+  color: var(--accent);
+  border: 1.5px solid var(--accent);
+  border-radius: 0.4rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: none;
+  transition: all 0.3s;
+}
+.btn-outline:hover {
+  background: var(--sky-light);
+  transform: translateY(-2px);
+}
+
+/* HERO CARD */
+.hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  animation: fadeSlideIn 1.2s ease 0.5s both;
+}
+.hero-card {
+  background: white;
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.08), 0 0 0 1px var(--cream-deep);
+  width: 320px;
+  position: relative;
+}
+.hero-card::before {
+  content: '';
+  position: absolute;
+  top: -2px; left: -2px; right: -2px; bottom: -2px;
+  background: linear-gradient(135deg, var(--sky-deep), var(--cream-deep));
+  border-radius: 1.6rem;
+  z-index: -1;
+  opacity: 0.5;
+}
+.avatar {
+  width: 80px; height: 80px;
+  background: linear-gradient(135deg, var(--sky), var(--accent));
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  color: white;
+  font-weight: 600;
+}
+.card-name {
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 0.3rem;
+}
+.card-role {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+.card-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.8rem;
+  border-top: 1px solid var(--cream-deep);
+  padding-top: 1.2rem;
+}
+.stat { text-align: center; }
+.stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--accent);
+  line-height: 1;
+}
+.stat-label { font-size: 0.7rem; color: var(--ink-muted); margin-top: 0.2rem; }
+
+@keyframes fadeSlideIn {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 7rem 2rem 4rem;
+  }
+  .hero-visual { display: none; }
+}

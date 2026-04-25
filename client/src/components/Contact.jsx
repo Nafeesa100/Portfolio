@@ -3,7 +3,7 @@ import emailjs from '@emailjs/browser'
 import './Contact.css'
 
 // ⚠️ Yeh 3 values emailjs.com se leni hain
-const SERVICE_ID = "service_e2rbg2j"
+const SERVICE_ID = "service_rsgbomp"
 const TEMPLATE_ID = "template_0ymw3ge"
 const PUBLIC_KEY = "jM4YHN8yCRcNXyb9x"
 

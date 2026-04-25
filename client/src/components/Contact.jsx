@@ -3,9 +3,9 @@ import emailjs from '@emailjs/browser'
 import './Contact.css'
 
 // ⚠️ Yeh 3 values emailjs.com se leni hain
-const SERVICE_ID = "service_4gdjxg9"
-const TEMPLATE_ID = "template_5ad0pm7"
-const PUBLIC_KEY = "ziaeuhdyTO-1vU39Q"
+const SERVICE_ID = "service_e2rbg2j"
+const TEMPLATE_ID = "template_0ymw3ge"
+const PUBLIC_KEY = "jM4YHN8yCRcNXyb9x"
 
 export default function Contact() {
   const formRef = useRef()
